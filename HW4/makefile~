@@ -1,0 +1,10 @@
+all: main
+
+main: main.o
+	gcc main.o -pthread -o grephTh
+    
+main.o: main.c
+	gcc -c main.c -pthread
+    
+clean: 
+	rm *.o grephTh
